@@ -37,14 +37,20 @@ using System.Net.Http.Headers;
 //}
 
 ProductService productService = new();
+CategoryService categoryService = new();
 
 
-Console.WriteLine("1.create");
-Console.WriteLine("2.ShowAll");
-Console.WriteLine("3.Delete");
-Console.WriteLine("4.Get");
+Console.WriteLine("1.Create Product");
+Console.WriteLine("2.ShowAll Product");
+Console.WriteLine("3.Delete Product");
+Console.WriteLine("4.Get Product");
+Console.WriteLine("5.Update Product");
+Console.WriteLine("6.Create Category");
+Console.WriteLine("7.ShowAll Category");
+Console.WriteLine("8.Delete Category");
+Console.WriteLine("9.Get Category");
+Console.WriteLine("10.Update Category");
 Console.WriteLine("0.Close");
-
 string request = Console.ReadLine();
 
 while (request != "0")
@@ -63,15 +69,39 @@ while (request != "0")
             case "4":
                 productService.GetProductById();
             break;
+        case "5":
+            productService.Update();
+            break;
+            case "6":
+                categoryService.Create();
+            break;
+            case "7":
+                categoryService.ShowAll();
+            break;
+        case "8":
+            categoryService.Delete();
+            break;
+        case "9":
+            categoryService.GetProductById();
+            break;
+        case "10":
+            categoryService.Update();
+            break;
         default:
             Console.WriteLine("Add valid option");
             break;
     }
 
-    Console.WriteLine("1.create");
-    Console.WriteLine("2.ShowAll");
-    Console.WriteLine("3.Delete");
-    Console.WriteLine("4.Get");
+    Console.WriteLine("1.Create Product");
+    Console.WriteLine("2.ShowAll Product");
+    Console.WriteLine("3.Delete Product");
+    Console.WriteLine("4.Get Product");
+    Console.WriteLine("5.Update Product");
+    Console.WriteLine("6.Create Category");
+    Console.WriteLine("7.ShowAll Category");
+    Console.WriteLine("8.Delete Category");
+    Console.WriteLine("9.Get Category");
+    Console.WriteLine("10.Update Category");
     Console.WriteLine("0.Close");
 
     request = Console.ReadLine();
